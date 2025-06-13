@@ -1,0 +1,26 @@
+#Simple choose your own adventure
+
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+print("You wake up on a sandy beach. You dust yourself off and look around you.")
+print("The boat you arrived on is broken. You walk into the island's forest.")
+
+choice_one = input("You are at a crossroads. Do you go left (L) or right (R)?")
+if choice_one != "L":
+    print("You fall into a hole covered by leaves. Game over.")
+else:
+    print("You are walking when you come across a river. There is no way around.")
+    choice_two = input("Do you swim across (S) or wait (W)?")
+    if choice_two != "W":
+        print("Swimming across the river, you are suddenly attacked by piranhas. Game over.")
+    else:
+        print("Suddenly, three doors rise out of the Earth in front of you.")
+        choice_three = input("Which door do you open? Red (R), Yellow (Y), or Blue (B)?")
+        if choice_three == "R":
+            print("The second you open the door, a large flame engulfs you. Game Over.")
+        elif choice_three == "Y":
+            print("Indescribable riches stare back at you. Congratulations!")
+        elif choice_three == "B":
+            print("As soon as you turn the knob, a pack of wild beasts escape and tear at your flesh. Game over.")
+        else:
+            print("???.....Game Over.")
