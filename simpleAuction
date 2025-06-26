@@ -1,0 +1,23 @@
+#get initial bidder and bid, put in dictionary
+name = input("What is your name?\n")
+bid = int(input("What is your bid?\n"))
+bid_dict = {name : bid}
+bidders = input("Are there more bidders? y or n\n")
+
+#add additional bidders and bids
+while bidders == "y":
+    key = input("Name of bidder:")
+    value = int(input("What is their bid?:"))
+    bid_dict[key] = value
+    bidders = input("Are there more bidders?")
+
+highest_bidder = ""
+highest_bid = 0
+
+#find highest bidder
+for index in bid_dict:
+    if bid_dict[index] > highest_bid:
+        highest_bidder = index
+        highest_bid = bid_dict[index]
+
+print(f"The winner is {highest_bidder} with a bid of {highest_bid}")
